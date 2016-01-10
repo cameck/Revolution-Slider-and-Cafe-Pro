@@ -3,15 +3,15 @@ How to Replace the Main Background Image with Revolution Slider in the Cafe Pro 
 I noticed a lot of people asking about this, so here's the solution!
 
 <ol>
-<li>1. <a href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?s_phrase=slider+Revolution&s_rank=2&ref=cameck" target="_blank">Download Slider Revolution from Code Canyon</a> and install it per Code Canyon's instructions.</li>
+<li> <a href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?s_phrase=slider+Revolution&s_rank=2&ref=cameck" target="_blank">Download Slider Revolution from Code Canyon</a> and install it per Code Canyon's instructions.</li>
 
 <li>Navigate to this folder: /public_html/wp-content/themes/cafe-pro via FTP</li>
 <li>Open the front-page.php file</li>
 
-<li>Right before the closing:
+<li>Right before the closing:<br>
 <code>genesis();</code>
-
-Add this code:
+<br>
+Add this code:<br>
 <code>// Replace header hook to include slider
 remove_action( 'genesis_header', 'genesis_do_header' ); 
 add_action( 'genesis_header', 'genesis_do_new_header' ); 
