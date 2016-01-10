@@ -9,10 +9,10 @@ I noticed a lot of people asking about this, so here's the solution!
 <li>Open the front-page.php file</li>
 
 <li>Right before the closing:
-genesis();
+<code>genesis();</code>
 
 Add this code:
-// Replace header hook to include slider
+<code>// Replace header hook to include slider
 remove_action( 'genesis_header', 'genesis_do_header' ); 
 add_action( 'genesis_header', 'genesis_do_new_header' ); 
 
@@ -25,7 +25,7 @@ echo  do_shortcode('[rev_slider alias="main"][/rev_slider]');
         dynamic_sidebar( 'header-right' ); 
         echo '</div><!-- end .widget-area -->'; 
     } 
-}</li>
+}</code></li>
 
 <li>Save the file. This adds the Revolution Slider to our Home Page template.</li>
 
@@ -44,7 +44,7 @@ We need to comment out some JavaScript that is conflicting with our CSS.</aside>
 
 <li>Next open up the home.js file (/public_html/wp-content/themes/cafe-pro/js/home.js and comment out both instances of this code:
 
-$('.front-page-header') .css({'height': newHeight +'px'});</li>
+<code>$('.front-page-header') .css({'height': newHeight +'px'});</li></code>
 
 </ol>
 You did it! 
